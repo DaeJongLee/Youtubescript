@@ -1,6 +1,5 @@
 import streamlit as st
 import re
-import pyperclip
 import textwrap
 from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
@@ -102,8 +101,6 @@ def main():
             st.text_area("🧾 구조화된 자막", structured, height=300)
             st.text_area("📝 문서화된 자막", formal, height=300)
             
-            pyperclip.copy(formal)
-            st.success("✅ 문서화된 자막이 클립보드에 복사되었습니다.")
         else:
             st.warning("❌ 스크립트를 찾을 수 없습니다.")
 
